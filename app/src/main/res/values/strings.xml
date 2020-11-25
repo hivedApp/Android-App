@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Hived</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+
+
+    <!-- TODO: Add your Cognito pool details here -->
+    <string name="cognito_web_domain">megthinksolutions.auth.ap-south-1.amazoncognito.com</string>
+    <string name="cognito_client_id">4f13vqoishmrn3jq21f2qghb0f</string>
+    <string name="cognito_client_secret">1fl5j5sp7187plpd6kpaulp14boitt1s86888b40f6e11pmkmpjc</string>
+    <string name="app_redirect">hived://login/redirect</string>
+
+    <!-- Values for this demo App -->
+    <string name="app_access_token">access_token</string>
+    <string name="app_id_token">id_token</string>
+</resources>
