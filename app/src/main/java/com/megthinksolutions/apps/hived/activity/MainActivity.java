@@ -1,4 +1,4 @@
-package com.megthinksolutions.apps.hived;
+package com.megthinksolutions.apps.hived.activity;
 
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -8,6 +8,7 @@ import android.util.Base64;
 import android.util.Log;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.megthinksolutions.apps.hived.R;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;

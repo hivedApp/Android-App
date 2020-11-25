@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: "androidx.navigation.safeargs"
+
 
 android {
     compileSdkVersion 30
@@ -10,8 +12,13 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    dataBinding {
+        enabled = true
     }
 
     signingConfigs {
@@ -36,7 +43,12 @@ android {
         }
     }
 
-
+    compileOptions {
+        // Support for Java 8 features
+        coreLibraryDesugaringEnabled true
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 
 
 }
@@ -54,9 +66,23 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+    // Support for Java 8 features
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.0.10'
+
     // Required for Cognito
-            implementation ('com.amazonaws:aws-android-sdk-cognitoauth:2.16.+@aar') { transitive = true}
+    implementation ('com.amazonaws:aws-android-sdk-cognitoauth:2.16.+@aar') { transitive = true}
 
 //    implementation 'com.amazonaws:aws-android-sdk-cognitoidentityprovider:2.16.+'
+
+    implementation 'com.android.support:multidex:1.0.3'
+
+    def nav_version = "2.3.1"
+    // NavigationGraph
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 
 }

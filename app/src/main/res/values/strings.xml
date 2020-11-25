@@ -15,4 +15,17 @@
     <!-- Values for this demo App -->
     <string name="app_access_token">access_token</string>
     <string name="app_id_token">id_token</string>
+
+    <string name="facebook_app_id">374992136905056</string>
+    <string name="fb_login_protocol_scheme">fb374992136905056</string>
+
+    <!-- GOOGLE LOGIN API KEY-->
+    <string name="server_client_id">http://153096018513-cj12vuvmd905ggt43oduav2pith15bhr.apps.googleusercontent.com/</string>
+    <string name="server_client_secret">AIzaSyDOzoCmwgGOos0eFdDVsoT3iDD-bZG-wq8</string>
+
+    <string name="pref_isFirstTimeLaunch_key">IsFirstTimeLaunch</string>
+
+    <string name="tv_welcome_slide_one">Converter Ipod Video Taking Portable Video Viewing To A Whole New Level</string>
+    <string name="tv_welcome_slide_two">Protective Preventative Maintenance</string>
+    <string name="tv_welcome_slide_three">Download Free Song For \nIpod</string>
 </resources>

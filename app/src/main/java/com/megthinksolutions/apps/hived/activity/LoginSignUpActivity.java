@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.megthinksolutions.apps.hived;
+package com.megthinksolutions.apps.hived.activity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -32,6 +32,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.amazonaws.mobileconnectors.cognitoauth.Auth;
 import com.amazonaws.mobileconnectors.cognitoauth.AuthUserSession;
 import com.amazonaws.mobileconnectors.cognitoauth.handlers.AuthHandler;
+import com.megthinksolutions.apps.hived.R;
 import com.megthinksolutions.apps.hived.ui.fragments.AuthUserFragment;
 import com.megthinksolutions.apps.hived.ui.fragments.UnauthUserFragment;
 
