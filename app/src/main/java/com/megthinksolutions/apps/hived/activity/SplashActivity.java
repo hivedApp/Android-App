@@ -132,7 +132,7 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void launchHomeScreen() {
-        startActivity(new Intent(SplashActivity.this, LoginSignUpActivity.class));
+        startActivity(new Intent(SplashActivity.this, ChooseLoginOptionActivity.class));
         finish();
     }
 

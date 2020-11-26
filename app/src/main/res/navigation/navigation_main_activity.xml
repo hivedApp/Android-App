@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main_activity"
+    app:startDestination="@id/chooseLoginOptionFragment">
+
+    <fragment
+        android:id="@+id/chooseLoginOptionFragment"
+        android:name="com.hived.fragments.ChooseLoginOptionFragment"
+        android:label="ChooseLoginOptionFragment"
+        tools:layout="@layout/choose_login_option_fragment">
+        <action
+            android:id="@+id/action_chooseLoginOptionFragment_to_phoneLoginFragment"
+            app:destination="@id/phoneLoginFragment"
+            app:popUpTo="@id/chooseLoginOptionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/phoneLoginFragment"
+        android:name="com.hived.fragments.PhoneLoginFragment"
+        android:label="phone_login_fragment"
+        tools:layout="@layout/phone_login_fragment" >
+        <action
+            android:id="@+id/action_phoneLoginFragment_to_chooseLoginOptionFragment"
+            app:destination="@id/chooseLoginOptionFragment" />
+        <action
+            android:id="@+id/action_phoneLoginFragment_to_OTPFragment"
+            app:destination="@id/OTPFragment"
+            app:popUpTo="@id/phoneLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/OTPFragment"
+        android:name="com.hived.fragments.OTPFragment"
+        android:label="OTPFragment"
+        tools:layout="@layout/otp_fragment">
+        <action
+            android:id="@+id/action_OTPFragment_to_phoneLoginFragment"
+            app:destination="@id/phoneLoginFragment" />
+    </fragment>
+
+</navigation>

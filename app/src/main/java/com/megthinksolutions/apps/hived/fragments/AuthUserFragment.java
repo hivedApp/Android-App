@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.megthinksolutions.apps.hived.ui.fragments;
+package com.megthinksolutions.apps.hived.fragments;
 
 import android.content.Context;
 import android.os.Bundle;

@@ -3,23 +3,50 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@id/nav_home">
 
     <fragment
-        android:id="@+id/navigation_home"
+        android:id="@+id/nav_home"
         android:name="com.megthinksolutions.apps.hived.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.megthinksolutions.apps.hived.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/nav_div_Video"
+        android:name="com.megthinksolutions.apps.hived.ui.faqs.FAQsFragment"
+        android:label="Div Video"
+        tools:layout="@layout/div_video_fragment" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.megthinksolutions.apps.hived.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/nav_faqs"
+        android:name="com.megthinksolutions.apps.hived.ui.extendwork.ExtendWorkFragment"
+        android:label="FAQs"
+        tools:layout="@layout/fragment_faqs" />
+    <fragment
+        android:id="@+id/nav_extend_work"
+        android:name="com.megthinksolutions.apps.hived.ui.extendwork.ExtendWorkFragment"
+        android:label="Extend Work"
+        tools:layout="@layout/fragment_extend_work" />
+    <fragment
+        android:id="@+id/nav_service"
+        android:name="com.megthinksolutions.apps.hived.ui.extendwork.ExtendWorkFragment"
+        android:label="Service"
+        tools:layout="@layout/service_fragment" />
+
+
+    <fragment
+        android:id="@+id/bottom_nav_home"
+        android:name="com.megthinksolutions.apps.hived.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/bottom_nav_add_new"
+        android:name="com.megthinksolutions.apps.hived.ui.addNew.AddNewFragment"
+        android:label="add_new_fragment"
+        tools:layout="@layout/add_new_fragment" />
+    <fragment
+        android:id="@+id/bottom_nav_profile"
+        android:name="com.megthinksolutions.apps.hived.ui.profile.ProfileFragment"
+        android:label="profile_fragment"
+        tools:layout="@layout/profile_fragment" />
 </navigation>
