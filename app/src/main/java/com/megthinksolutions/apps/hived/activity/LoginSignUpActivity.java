@@ -20,9 +20,12 @@ package com.megthinksolutions.apps.hived.activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
+
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
@@ -32,6 +35,8 @@ import com.amazonaws.mobileconnectors.cognitoauth.handlers.AuthHandler;
 import com.megthinksolutions.apps.hived.R;
 import com.megthinksolutions.apps.hived.fragments.AuthUserFragment;
 import com.megthinksolutions.apps.hived.fragments.UnauthUserFragment;
+import com.megthinksolutions.apps.hived.utils.GetProductListFromJson;
+import com.megthinksolutions.apps.hived.utils.PreferenceUtils;
 
 public class LoginSignUpActivity extends AppCompatActivity
         implements AuthUserFragment.OnFragmentInteractionListener,
@@ -41,11 +46,15 @@ public class LoginSignUpActivity extends AppCompatActivity
     private AlertDialog userDialog;
     private Uri appRedirect;
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aws_activity_main);
+
         getSupportActionBar().hide();
+        PreferenceUtils.getInstance(this,true); // Get the preferences
+
         initCognito();
         setNewUserFragment();
     }
@@ -83,6 +92,7 @@ public class LoginSignUpActivity extends AppCompatActivity
         Bundle fragArgs = new Bundle();
         fragArgs.putString(getString(R.string.app_access_token), session.getAccessToken().getJWTToken());
         fragArgs.putString(getString(R.string.app_id_token), session.getIdToken().getJWTToken());
+
         userFragment.setArguments(fragArgs);
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();

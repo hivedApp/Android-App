@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.megthinksolutions.apps.hived.R;
 import com.megthinksolutions.apps.hived.databinding.ActivityChooseLoginOptionBinding;
+import com.megthinksolutions.apps.hived.utils.PreferenceUtils;
 import com.megthinksolutions.apps.hived.utils.Utils;
 
 import java.util.Arrays;
@@ -21,6 +22,13 @@ public class ChooseLoginOptionActivity extends AppCompatActivity implements View
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_choose_login_option);
         getSupportActionBar().hide();
+
+        PreferenceUtils.getInstance(this,true); // Get the preferences
+
+        if (PreferenceUtils.getInstance().getBoolean(R.string.pref_is_login_key)){
+            Intent intent = new Intent(ChooseLoginOptionActivity.this, MainActivity.class);
+            startActivity(intent);
+        }
 
         binding.imgPhoneLogin.setOnClickListener(this);
         binding.imgFacebookLogin.setOnClickListener(this);

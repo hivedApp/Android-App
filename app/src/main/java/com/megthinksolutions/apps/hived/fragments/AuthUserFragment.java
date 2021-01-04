@@ -18,7 +18,9 @@
 package com.megthinksolutions.apps.hived.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,7 +33,10 @@ import androidx.fragment.app.Fragment;
 
 import com.amazonaws.mobileconnectors.cognitoauth.util.JWTParser;
 import com.megthinksolutions.apps.hived.R;
+import com.megthinksolutions.apps.hived.activity.MainActivity;
+import com.megthinksolutions.apps.hived.utils.PreferenceUtils;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Iterator;
@@ -70,8 +75,12 @@ public class AuthUserFragment extends Fragment {
             Log.d("-- frag access: ", accessToken);
             idToken = getArguments().getString(getString(R.string.app_id_token));
             Log.d("-- frag id: ", idToken);
+
+            getUserDetail(JWTParser.getPayload(idToken));
+
         }
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -105,6 +114,7 @@ public class AuthUserFragment extends Fragment {
      */
     public interface OnFragmentInteractionListener {
         void onButtonPress(boolean signIn);
+
         void showPopup(String title, String content);
     }
 
@@ -119,6 +129,7 @@ public class AuthUserFragment extends Fragment {
 
     /**
      * Show token.
+     *
      * @param title Token name.
      * @param token Token payload.
      */
@@ -130,6 +141,7 @@ public class AuthUserFragment extends Fragment {
 
     /**
      * Get references to view components.
+     *
      * @param view {@link View}.
      */
     private void wireUp(View view) {
@@ -144,6 +156,7 @@ public class AuthUserFragment extends Fragment {
 
     /**
      * Display card if the token is available.
+     *
      * @param view
      */
     private void showCards(View view) {
@@ -192,12 +205,43 @@ public class AuthUserFragment extends Fragment {
                 while (jsonIterator.hasNext()) {
                     String key = jsonIterator.next();
                     prettyPrintBuilder.append("\n").append(tab).append(key).append(seperator).append(jwtJson.get(key));
+
+                    Log.d("prettyPrint", prettyPrintBuilder.toString());
                 }
             } catch (Exception e) {
 
             }
         }
         prettyPrintBuilder.append("\n}");
-        return  prettyPrintBuilder.toString();
+        return prettyPrintBuilder.toString();
     }
+
+    private void getUserDetail(JSONObject payload) {
+        try {
+
+            String userId = payload.getString("sub");
+            String dob = payload.getString("birthdate");
+            String name = payload.getString("name");
+            String email = payload.getString("email");
+            String phone_number = payload.getString("phone_number");
+
+            Log.d("userDetailSUB: ", "ID: " + userId + "\n" + dob + "\n" + name + "\n" + email + "\n" + phone_number);
+
+            Intent intent = new Intent(getActivity(), MainActivity.class);
+            PreferenceUtils.getInstance().putString(R.string.pref_hived_auth_key, idToken);
+            PreferenceUtils.getInstance().putString(R.string.pref_hived_auth_access_token, accessToken);
+            PreferenceUtils.getInstance().putString(R.string.pref_hived_auth_user_id, userId);
+            PreferenceUtils.getInstance().putString(R.string.pref_hived_auth_user_dob, dob);
+            PreferenceUtils.getInstance().putString(R.string.pref_hived_auth_user_name, name);
+            PreferenceUtils.getInstance().putString(R.string.pref_hived_auth_user_email, email);
+            PreferenceUtils.getInstance().putString(R.string.pref_hived_auth_user_phone, phone_number);
+
+            startActivity(intent);
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }

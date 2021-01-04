@@ -1,0 +1,190 @@
+{
+  "array": [
+    {
+      "id": "1",
+      "select": "Televisions",
+      "brand": "Samsung 32 HD Smart TV",
+      "model": "LED TV UA32TE40AAKXXL"
+    },
+    {
+      "id": "2",
+      "select": "Televisions",
+      "brand": "Samsung 32 HD Smart TV",
+      "model": "LED TV UA32TUE60AKXXL"
+    },
+    {
+      "id": "3",
+      "select": "Televisions",
+      "brand": "One Plus 32 HD Android TV",
+      "model": "Android TV 32Y1"
+    },
+    {
+      "id": "4",
+      "select": "Televisions",
+      "brand": "One Plus 32 HD Android TV",
+      "model": "Android TV 32Z1"
+    },
+    {
+      "id": "5",
+      "select": "Televisions",
+      "brand": "One Plus 55 HD Android TV",
+      "model": "Android TV 55Q1IN"
+    },
+    {
+      "id": "6",
+      "select": "Televisions",
+      "brand": "One Plus 55 HD Android TV",
+      "model": "Android TV 55ZL2IN"
+    },
+    {
+      "id": "7",
+      "select": "Televisions",
+      "brand": "Sony Bravia 32 HD TV",
+      "model": "Smart TV 32W6100"
+    },
+    {
+      "id": "8",
+      "select": "Televisions",
+      "brand": "Sony Bravia 32 HD TV",
+      "model": "Smart TV 32W672G"
+    },
+    {
+      "id": "9",
+      "select": "Televisions",
+      "brand": "Sony Bravia 32 HD TV",
+      "model": "Smart TV 32W622G"
+    },
+    {
+      "id": "10",
+      "select": "Televisions",
+      "brand": "Sony Bravia 32 HD TV",
+      "model": "Smart TV 32W512D"
+    },
+    {
+      "id": "11",
+      "select": "Headphones",
+      "brand": "SONY",
+      "model": "MDR-ZX110A Stereo Headphones"
+    },
+    {
+      "id": "12",
+      "select": "Headphones",
+      "brand": "SONY",
+      "model": "MDR-MX150AP Headphones"
+    },
+    {
+      "id": "13",
+      "select": "Headphones",
+      "brand": "SONY",
+      "model": "MDR-XB55AP Base Headphones"
+    },
+    {
+      "id": "14",
+      "select": "Headphones",
+      "brand": "SONY",
+      "model": "MDR-XB54 Stereo Headphones"
+    },
+    {
+      "id": "15",
+      "select": "Headphones",
+      "brand": "JBL",
+      "model": "JBL T205BT Pure Base"
+    },
+    {
+      "id": "16",
+      "select": "Headphones",
+      "brand": "JBL",
+      "model": "C100SI deep base"
+    },
+    {
+      "id": "17",
+      "select": "Headphones",
+      "brand": "JBL",
+      "model": "CS0HI with mic"
+    },
+    {
+      "id": "18",
+      "select": "Headphones",
+      "brand": "boAt Airdopes",
+      "model": "441 TWS Ear-Buds"
+    },
+    {
+      "id": "19",
+      "select": "Headphones",
+      "brand": "boAT Airdopes",
+      "model": "3402 TWS Ear-Buds"
+    },
+    {
+      "id": "20",
+      "select": "Headphones",
+      "brand": "boAT Airdopes",
+      "model": "255 pro Neckband"
+    },
+    {
+      "id": "21",
+      "select": "Air Conditioners",
+      "brand": "Panasonic Split AC 1 Ton",
+      "model": " CS/CU-XU12WKYF/2020"
+    },
+    {
+      "id": "22",
+      "select": "Air Conditioners",
+      "brand": "Panasonic Split AC 1 Ton",
+      "model": "CS/CU-SU12WKYW/2020"
+    },
+    {
+      "id": "23",
+      "select": "Air Conditioners",
+      "brand": "Panasonic Split AC 1 Ton",
+      "model": "CS/CU-NU18WKYW/2019"
+    },
+    {
+      "id": "24",
+      "select": "Air Conditioners",
+      "brand": "Panasonic 1.5 Ton Split AC",
+      "model": "CS/CU-NU18WSAW/2020"
+    },
+    {
+      "id": "25",
+      "select": "Air Conditioners",
+      "brand": "Panasonic 1.5 Ton Split AC",
+      "model": " CS/CU-KU18WKY-1"
+    },
+    {
+      "id": "26",
+      "select": "Air Conditioners",
+      "brand": "Panasonic 2 Ton 5 star AC",
+      "model": "CS/CU-NU24WKYW"
+    },
+    {
+      "id": "27",
+      "select": "Air Conditioners",
+      "brand": "Panasonic 2 Ton 5 star AC",
+      "model": "CS/CU-NU524WKYW"
+    },
+    {
+      "id": "28",
+      "select": "Air Conditioners",
+      "brand": "Blue Star 1.5 Ton AC",
+      "model": "IC518DBTX 2020 White"
+    },
+    {
+      "id": "29",
+      "select": "Air Conditioners",
+      "brand": "Blue Star 1.5 Ton AC",
+      "model": "FS318AATX 2018 White"
+    },
+    {
+      "id": "30",
+      "select": "Air Conditioners",
+      "brand": "Blue Star 1.5 Ton AC",
+      "model": "GK318AABF 2019 White"
+    },
+    {
+      "id": "31",
+      "select": "Washing Machine",
+      "brand": "LG 8 KG",
+      "model": "GRTY12GMKL1 2020"
+    }
+  ]
+}

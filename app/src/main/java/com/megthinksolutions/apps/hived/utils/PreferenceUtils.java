@@ -2,6 +2,7 @@ package com.megthinksolutions.apps.hived.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.util.SparseArray;
 
 import androidx.annotation.StringRes;
@@ -9,29 +10,32 @@ import androidx.annotation.StringRes;
 import com.megthinksolutions.apps.hived.R;
 
 
-public class PreferenceManager {
-    private static PreferenceManager sSharedPrefs;
+public class PreferenceUtils {
+    private static PreferenceUtils sSharedPrefs;
     SharedPreferences pref;
     SharedPreferences.Editor editor;
     private boolean mBulkUpdate = false;
     Context _context;
 
     private static final SparseArray<Object> sDefaultValues = new SparseArray<>();
-    public PreferenceManager(Context context) {
-        _context = context;
-        pref = android.preference.PreferenceManager.getDefaultSharedPreferences(context);
-        sDefaultValues.put(R.string.pref_isFirstTimeLaunch_key, true);
 
+    public PreferenceUtils(Context context) {
+        _context = context;
+        pref = PreferenceManager.getDefaultSharedPreferences(context);
+
+        sDefaultValues.put(R.string.pref_isFirstTimeLaunch_key, true);
+        sDefaultValues.put(R.string.pref_is_login_key, false);
+        sDefaultValues.put(R.string.pref_product_id,"");
     }
 
-    public static PreferenceManager getInstance(Context context, boolean isNewActivity) {
+    public static PreferenceUtils getInstance(Context context, boolean isNewActivity) {
         if (sSharedPrefs == null && isNewActivity) {
-            sSharedPrefs = new PreferenceManager(context.getApplicationContext());
+            sSharedPrefs = new PreferenceUtils(context.getApplicationContext());
         }
         return sSharedPrefs;
     }
 
-    public static PreferenceManager getInstance() {
+    public static PreferenceUtils getInstance() {
         if (sSharedPrefs != null) {
             return sSharedPrefs;
         }
