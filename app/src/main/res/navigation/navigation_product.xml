@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_product.xml"
+    app:startDestination="@id/productTypeFragment">
+
+    <fragment
+        android:id="@+id/productTypeFragment"
+        android:name="com.megthinksolutions.apps.hived.fragments.ProductTypeFragment"
+        android:label="ProductTypeFragment"
+        tools:layout="@layout/product_type_fragment">
+        <action
+            android:id="@+id/action_productTypeFragment_to_productReviewFragment"
+            app:destination="@id/productReviewFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/productTypeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productReviewFragment"
+        android:name="com.megthinksolutions.apps.hived.fragments.ProductReviewFragment"
+        android:label="product_review_fragment"
+        tools:layout="@layout/product_review_fragment" >
+        <action
+            android:id="@+id/action_productReviewFragment_to_productSellerReviewFragment"
+            app:destination="@id/productSellerReviewFragment"
+            app:popUpTo="@id/productReviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productSellerReviewFragment"
+        android:name="com.megthinksolutions.apps.hived.fragments.ProductSellerReviewFragment"
+        android:label="product_seller_review_fragment"
+        tools:layout="@layout/product_seller_review_fragment" >
+        <action
+            android:id="@+id/action_productSellerReviewFragment_to_productPostFragment"
+            app:destination="@id/productPostFragment"
+            app:popUpTo="@id/productSellerReviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productPostFragment"
+        android:name="com.megthinksolutions.apps.hived.fragments.ProductPostFragment"
+        android:label="product_post_fragment"
+        tools:layout="@layout/product_post_fragment" />
+</navigation>

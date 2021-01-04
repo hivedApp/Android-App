@@ -42,11 +42,11 @@
     <fragment
         android:id="@+id/bottom_nav_add_new"
         android:name="com.megthinksolutions.apps.hived.ui.addNew.AddNewFragment"
-        android:label="add_new_fragment"
+        android:label="Add New"
         tools:layout="@layout/add_new_fragment" />
     <fragment
         android:id="@+id/bottom_nav_profile"
         android:name="com.megthinksolutions.apps.hived.ui.profile.ProfileFragment"
-        android:label="profile_fragment"
+        android:label="Profile"
         tools:layout="@layout/profile_fragment" />
 </navigation>

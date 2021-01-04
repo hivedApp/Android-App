@@ -20,6 +20,7 @@
     <color name="grey_500">#404142</color>
     <color name="grey_600">#303232</color>
     <color name="grey_700">#1D1E1E</color>
+    <color name="dark_blue">#1976D2</color>
 
     <color name="colorPrimary">#FFFFFF</color>
     <color name="colorPrimaryDark">#FFFFFF</color>
@@ -27,14 +28,20 @@
 
     <color name="white">#ffffff</color>
     <color name="red">#FF3e39</color>
+    <color name="dark_red">#C50F0A</color>
+
     <color name="text_color">#999</color>
     <color name="green">#1CFF03</color>
     <color name="light_grey_transparent">#82707070</color>
     <color name="dark_grey">#999</color>
     <color name="light_grey">#BDBDBD</color>
+    <color name="light_very_grey">#FAF5F5</color>
+    <color name="sub_title_nero">#1d1f22</color>
     <color name="black">#000000</color>
 
     <color name="grey1">#707070</color>
+    <color name="placeholder_grey">#AAADC4</color>
+    <color name="placeholder_grey_20">#33AAADC4</color>
 
 
     <!-- dots active colors -->

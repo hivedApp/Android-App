@@ -1,11 +1,83 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+<!--    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+<!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+<!--        <item name="colorPrimary">@color/colorPrimary</item>-->
+<!--        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+<!--        <item name="colorAccent">@color/colorAccent</item>-->
+<!--        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>-->
+<!--    </style>-->
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/dark_blue</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:spinnerItemStyle">@style/spinnerItemStyle</item>
+        <item name="snackbarStyle">@style/Widget.Design.Snackbar</item>
         <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+    </style>
+
+    <style name="AppThemeProduct" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/dark_blue</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:spinnerItemStyle">@style/spinnerItemStyle</item>
+        <item name="snackbarStyle">@style/Widget.Design.Snackbar</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+    </style>
+
+    <style name="TextLabel" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:textColorHint">@color/dark_blue</item>
+        <item name="android:textSize">16sp</item>
+        <item name="colorControlNormal">@color/dark_grey</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="android:paddingTop">13dp</item>
+        <item name="android:paddingBottom">13dp</item>
+
+        <item name="enforceMaterialTheme">true</item>
+        <item name="enforceTextAppearance">true</item>
+
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxBackgroundColor">@null</item>
+<!--        <item name="errorIconDrawable">@drawable/mtrl_ic_error</item>-->
+<!--        <item name="errorIconTint">@color/mtrl_error</item>-->
+<!--        <item name="endIconTint">@color/mtrl_outlined_icon_tint</item>-->
+<!--        <item name="startIconTint">@color/mtrl_outlined_icon_tint</item>-->
+<!--        <item name="boxCollapsedPaddingTop">0dp</item>-->
+<!--        <item name="boxStrokeColor">@color/mtrl_outlined_stroke_color</item>-->
+<!--        <item name="boxStrokeErrorColor">@color/mtrl_error</item>-->
+<!--        <item name="boxStrokeWidth">@dimen/mtrl_textinput_box_stroke_width_default</item>-->
+<!--        <item name="boxStrokeWidthFocused">@dimen/mtrl_textinput_box_stroke_width_focused</item>-->
+
+<!--        <item name="counterTextAppearance">?attr/textAppearanceCaption</item>-->
+<!--        <item name="counterOverflowTextAppearance">?attr/textAppearanceCaption</item>-->
+<!--        <item name="errorTextAppearance">?attr/textAppearanceCaption</item>-->
+<!--        <item name="helperTextTextAppearance">?attr/textAppearanceCaption</item>-->
+<!--        <item name="hintTextAppearance">?attr/textAppearanceCaption</item>-->
+<!--        <item name="placeholderTextAppearance">?attr/textAppearanceSubtitle1</item>-->
+<!--        <item name="prefixTextAppearance">?attr/textAppearanceSubtitle1</item>-->
+<!--        <item name="suffixTextAppearance">?attr/textAppearanceSubtitle1</item>-->
+
+<!--        <item name="counterTextColor">@color/mtrl_indicator_text_color</item>-->
+<!--        <item name="counterOverflowTextColor">@color/mtrl_error</item>-->
+<!--        <item name="errorTextColor">@color/mtrl_error</item>-->
+<!--        <item name="helperTextTextColor">@color/mtrl_indicator_text_color</item>-->
+<!--        &lt;!&ndash; The color of the label when it is collapsed and the text field is active &ndash;&gt;-->
+<!--        <item name="hintTextColor">?attr/colorPrimary</item>-->
+<!--        <item name="placeholderTextColor">@color/mtrl_indicator_text_color</item>-->
+<!--        <item name="prefixTextColor">@color/mtrl_indicator_text_color</item>-->
+<!--        <item name="suffixTextColor">@color/mtrl_indicator_text_color</item>-->
+<!--        &lt;!&ndash; The color of the label in all other text field states (such as resting and disabled) &ndash;&gt;-->
+<!--        <item name="android:textColorHint">@color/mtrl_indicator_text_color</item>-->
+
+<!--        <item name="shapeAppearance">?attr/shapeAppearanceSmallComponent</item>-->
+<!--        <item name="shapeAppearanceOverlay">@null</item>-->
+    </style>
+
+    <style name="spinnerItemStyle">
+        <item name="android:textSize">14sp</item>
     </style>
 
     <style name="splashScreenTheme" parent="@android:style/Theme.DeviceDefault.Light.NoActionBar">
@@ -28,6 +100,18 @@
     <style name="ToolbarColoredBackArrow" parent="AppTheme">
         <item name="android:textColorPrimary">@color/black</item>
         <item name="android:textColorSecondary">@color/red</item>
+    </style>
+
+    <style name="spinner_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/image_bg</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:popupBackground">#DFFFFFFF</item>
     </style>
 
 </resources>

@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.viewpager.widget.PagerAdapter;
@@ -22,7 +23,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.megthinksolutions.apps.hived.R;
 import com.megthinksolutions.apps.hived.databinding.ActivitySplashBinding;
-import com.megthinksolutions.apps.hived.utils.PreferenceManager;
+import com.megthinksolutions.apps.hived.utils.PreferenceUtils;
 
 public class SplashActivity extends AppCompatActivity {
     ActivitySplashBinding binding;
@@ -32,13 +33,14 @@ public class SplashActivity extends AppCompatActivity {
     private LinearLayout dotsLayout;
     private TextView[] dots;
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         // Checking for first time launch - before calling setContentView()
-        PreferenceManager.getInstance(this, true);
-        if (!PreferenceManager.getInstance().getBoolean(R.string.pref_isFirstTimeLaunch_key)) {
+        PreferenceUtils.getInstance(this, true);
+        if (!PreferenceUtils.getInstance().getBoolean(R.string.pref_isFirstTimeLaunch_key)) {
             launchHomeScreen();
         }
 
@@ -65,7 +67,7 @@ public class SplashActivity extends AppCompatActivity {
         binding.tvSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PreferenceManager.getInstance().putBoolean(R.string.pref_isFirstTimeLaunch_key, false);
+                PreferenceUtils.getInstance().putBoolean(R.string.pref_isFirstTimeLaunch_key, false);
                 launchHomeScreen();
             }
         });
@@ -73,7 +75,7 @@ public class SplashActivity extends AppCompatActivity {
         binding.tvNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PreferenceManager.getInstance().putBoolean(R.string.pref_isFirstTimeLaunch_key, false);
+                PreferenceUtils.getInstance().putBoolean(R.string.pref_isFirstTimeLaunch_key, false);
                 launchHomeScreen();
 
 //                // checking for last page
@@ -92,7 +94,7 @@ public class SplashActivity extends AppCompatActivity {
         binding.tvGetStarted.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PreferenceManager.getInstance().putBoolean(R.string.pref_isFirstTimeLaunch_key, false);
+                PreferenceUtils.getInstance().putBoolean(R.string.pref_isFirstTimeLaunch_key, false);
                 launchHomeScreen();
             }
         });
